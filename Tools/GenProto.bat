@@ -1,0 +1,1 @@
+python3 gen_proto.py
