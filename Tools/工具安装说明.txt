@@ -1,0 +1,10 @@
+1.python的安装
+windows
+自己安装python3，去官网自己下载。然后找到安装路径里面的python.exe，复制出来一个改名叫python3.exe。
+如果你安装过python2，出现冲突。说明你是老司机，自行解决。
+mac & linux 如果不自带python3 自行安装
+2第三方库的安装
+(理论上讲命令行直接拷贝就行的，真的报错自己谷歌搜吧，环境变量找不到pip之类的错误很简单。)
+pip install openpyxl // 读取excel用
+
+3
