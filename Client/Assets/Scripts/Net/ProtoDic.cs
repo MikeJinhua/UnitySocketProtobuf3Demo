@@ -1,32 +1,42 @@
-﻿using Google.Protobuf;
+
+using Google.Protobuf;
 using Msg;
 using System;
 using System.Collections.Generic;
 
 namespace Proto
 {
-    public class ProtoDic
-    {
-        private static List<int> _protoId = new List<int>
-        {
+   public class ProtoDic
+   {
+       private static List<int> _protoId = new List<int>
+       {
             0,
             1,
-            2
+            2,
+            3,
+            4,
+            5,
         };
 
-        private static List<Type>_protoType = new List<Type>
-        {
+      private static List<Type>_protoType = new List<Type>
+      {
+            typeof(StartFight),
+            typeof(FightResult),
+            typeof(EnterFight),
             typeof(SignUpResponse),
-            typeof(TocChat),
             typeof(TosChat),
-        };
+            typeof(TocChat),
+       };
 
-        private static readonly Dictionary<RuntimeTypeHandle, MessageParser> Parsers = new Dictionary<RuntimeTypeHandle, MessageParser>()
-        {
-            { typeof(SignUpResponse).TypeHandle,SignUpResponse.Parser },
-            { typeof(TocChat).TypeHandle,TocChat.Parser },
-            { typeof(TosChat).TypeHandle,TosChat.Parser }
-        };
+       private static readonly Dictionary<RuntimeTypeHandle, MessageParser> Parsers = new Dictionary<RuntimeTypeHandle, MessageParser>()
+       {
+            {typeof(StartFight).TypeHandle,StartFight.Parser },
+            {typeof(FightResult).TypeHandle,FightResult.Parser },
+            {typeof(EnterFight).TypeHandle,EnterFight.Parser },
+            {typeof(SignUpResponse).TypeHandle,SignUpResponse.Parser },
+            {typeof(TosChat).TypeHandle,TosChat.Parser },
+            {typeof(TocChat).TypeHandle,TocChat.Parser },
+       };
 
         public static MessageParser GetMessageParser(RuntimeTypeHandle typeHandle)
         {
