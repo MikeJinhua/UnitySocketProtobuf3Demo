@@ -1,5 +1,5 @@
 ﻿using Google.Protobuf;
-using ServerMessage;
+using Msg;
 using System;
 using System.Collections.Generic;
 

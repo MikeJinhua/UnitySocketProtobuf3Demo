@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-using ServerMessage;
+using Msg;
 
 public class LoginModel : BaseModel<LoginModel>
 {
