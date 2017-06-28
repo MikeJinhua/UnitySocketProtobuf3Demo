@@ -17,7 +17,7 @@ https://github.com/name5566/leaf
 
 2.Win版本消息工具已经完成。
 
-工具批处理文件在这里UnitySocketProtobuf3Demo\Tools\GenProto.bat
+消息批处理在这里UnitySocketProtobuf3Demo\Tools\GenProto.bat
 
 消息配置文件在这里UnitySocketProtobuf3Demo\Tools\Proto\src\*
 
