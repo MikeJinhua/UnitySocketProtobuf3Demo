@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using ServerMessage;
+using Msg;
 using UnityEngine;
 using Util;
 using Net;

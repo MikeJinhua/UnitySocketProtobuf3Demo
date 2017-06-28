@@ -1,5 +1,6 @@
-# UnitySocketProtobuf3Demo
-提供一套基础的游戏框架。这套框架不准备支持大型MMORPG，如果做MMORPG请绕行。
+
+# UnitySocketPtotobuf3Demo
+提供一套基础的游戏框架。这套框架不准备支持大型MMORPG。
 主要给中小型团队或者个人开发者提供了基础的框架。可以很快速的开发卡牌，棋牌等开房间，进副本战斗的游戏。
 目前进展，实现了做手游基础网络通讯。
 

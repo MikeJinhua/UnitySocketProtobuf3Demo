@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="GOPATH &lt;Server&gt;">
+    <CLASSES>
+      <root url="file://D:/GoPath/src/gopkg.in" />
+      <root url="file://D:/GoPath/src/github.com" />
+      <root url="file://D:/GoPath/src/.idea" />
+    </CLASSES>
+    <SOURCES>
+      <root url="file://D:/GoPath/src/gopkg.in" />
+      <root url="file://D:/GoPath/src/github.com" />
+      <root url="file://D:/GoPath/src/.idea" />
+    </SOURCES>
+    <excluded>
+      <root url="file://$PROJECT_DIR$" />
+    </excluded>
+  </library>
+</component>

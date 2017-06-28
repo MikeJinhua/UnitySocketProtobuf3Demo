@@ -7,7 +7,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace ServerMessage {
+namespace Msg {
 
   /// <summary>Holder for reflection information generated from login.proto</summary>
   public static partial class LoginReflection {
@@ -22,16 +22,16 @@ namespace ServerMessage {
     static LoginReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cgtsb2dpbi5wcm90bxINU2VydmVyTWVzc2FnZSI0Cg5TaWduVXBSZXNwb25z",
-            "ZRIRCgllcnJvckNvZGUYASABKAUSDwoHdmVyc2lvbhgCIAEoAiIoCgdUb3ND",
-            "aGF0EgwKBG5hbWUYASABKAkSDwoHY29udGVudBgCIAEoCSIoCgdUb2NDaGF0",
-            "EgwKBG5hbWUYASABKAkSDwoHY29udGVudBgCIAEoCWIGcHJvdG8z"));
+            "Cgtsb2dpbi5wcm90bxIDbXNnIjQKDlNpZ25VcFJlc3BvbnNlEhEKCWVycm9y",
+            "Q29kZRgBIAEoBRIPCgd2ZXJzaW9uGAIgASgCIigKB1Rvc0NoYXQSDAoEbmFt",
+            "ZRgBIAEoCRIPCgdjb250ZW50GAIgASgJIigKB1RvY0NoYXQSDAoEbmFtZRgB",
+            "IAEoCRIPCgdjb250ZW50GAIgASgJYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::ServerMessage.SignUpResponse), global::ServerMessage.SignUpResponse.Parser, new[]{ "ErrorCode", "Version" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::ServerMessage.TosChat), global::ServerMessage.TosChat.Parser, new[]{ "Name", "Content" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::ServerMessage.TocChat), global::ServerMessage.TocChat.Parser, new[]{ "Name", "Content" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Msg.SignUpResponse), global::Msg.SignUpResponse.Parser, new[]{ "ErrorCode", "Version" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Msg.TosChat), global::Msg.TosChat.Parser, new[]{ "Name", "Content" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Msg.TocChat), global::Msg.TocChat.Parser, new[]{ "Name", "Content" }, null, null, null)
           }));
     }
     #endregion
@@ -45,7 +45,7 @@ namespace ServerMessage {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::ServerMessage.LoginReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Msg.LoginReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -190,7 +190,7 @@ namespace ServerMessage {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::ServerMessage.LoginReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Msg.LoginReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -335,7 +335,7 @@ namespace ServerMessage {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::ServerMessage.LoginReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Msg.LoginReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

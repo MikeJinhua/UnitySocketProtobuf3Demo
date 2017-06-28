@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package msg;
+
+message StartFight
+{
+	  int32 errorCode = 1;
+	  float version = 2;
+}
+
+
+message FightResult
+{
+	  string name = 1;
+	  string content = 2;
+}
+
+message EnterFight
+{
+	  string name = 1;
+	  string content = 2;
+}
