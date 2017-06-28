@@ -1,5 +1,4 @@
 package msg
-
 import (
 	"github.com/name5566/leaf/network/protobuf"
 )
@@ -8,10 +7,12 @@ var (
 	Processor = protobuf.NewProcessor()
 )
 
-func init() {
-	// 这里我们注册了一个 JSON 消息 Hello
-	Processor.Register(&SignUpResponse{})
-	Processor.Register(&TocChat{})
-	Processor.Register(&TosChat{})
+func init() {	// 这里我们注册了一个 protobuf 消息)
+    Processor.Register(&StartFight{})
+    Processor.Register(&FightResult{})
+    Processor.Register(&EnterFight{})
+    Processor.Register(&SignUpResponse{})
+    Processor.Register(&TosChat{})
+    Processor.Register(&TocChat{})
 
 }
