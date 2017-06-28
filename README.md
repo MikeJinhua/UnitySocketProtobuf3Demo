@@ -8,6 +8,6 @@ https://github.com/caolaoyao/Chat，
 https://github.com/name5566/leaf
 表示感谢。如有侵权请及时联系。
 
-用到的几个人软件
-1.Unity5，马上升级Unity2017以后会一直更新。Unity保持最新是Unity开发必备技能。
+用到的几个软件
+1.Unity2017以后会一直更新。Unity保持最新是Unity开发必备技能。
 2.Protobuf3,有可能更新。
