@@ -26,7 +26,7 @@ https://github.com/name5566/leaf
 
 用到的几个软件
 
-1.Unity2017以后会一直更新。Unity保持最新是Unity开发必备技能。
+1.Unity目前是Unity5.6.Unity2017正式发布之后马上就升级。以后会一直更新。Unity保持最新是Unity开发必备技能。
 
 2.Protobuf3,有可能更新。
 
