@@ -2,27 +2,19 @@ import os
 
 import xlrd
 
+from TableCode.cs_data import GenCSTableData
 from TableCode.cs_file import GenCSTableManagerFile, genCSLoadTablesFile
+from TableCode.go_file import GenGoTableManagerFile
 from const import excel_dir
-
-
-def getExcelData(filePath):
-    pass
-
 
 def processExcel(filePath, fileName):
     if "." in fileName:
         fileName = fileName.split('.')
         fileName = fileName[0]
-    print(filePath)
     data = xlrd.open_workbook(filePath)
     table = data.sheets()[0]
     nrows = table.nrows
     ncols = table.ncols
-    for i in range(nrows):
-        print(table.row_values(i))
-    A1 = table.cell(4, 0).value
-    print(A1)
 
     cs_fields_index = []#filed index
     golang_fields_index = []#filed index
@@ -42,10 +34,11 @@ def processExcel(filePath, fileName):
     if len(cs_fields_index) > 0:
         cs_files.append(fileName)
         GenCSTableManagerFile(fileName, cs_fields_index, table)
+        GenCSTableData(fileName, cs_fields_index, table)
 
     if len(golang_fields_index) > 0:
         go_files.append(fileName)
-        GenCSTableManagerFile(fileName, golang_fields_index, table)
+        GenGoTableManagerFile(fileName, golang_fields_index, table)
 
 
 

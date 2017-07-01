@@ -8,14 +8,14 @@ public class TestTable
     public int ID;
     public string Name;
     public int HP;
-    public int[] LevelAP;
+    public string AP_Name;
     public  TestTable(string line)
     {
         string[] fileds = line.Split('	');
         ID =int.Parse(fileds[0]);
         Name =fileds[1];
         HP =int.Parse(fileds[2]);
-        LevelAP =TableUtil.LoadInts(fileds[4]);
+        AP_Name =fileds[3];
      }
 }
 
