@@ -171,10 +171,14 @@
     <Compile Include="Assets\Scripts\Net\ProtoDic.cs" />
     <Compile Include="Assets\Scripts\Net\SocketClient.cs" />
     <Compile Include="Assets\Scripts\Net\proto\Fight.cs" />
-    <Compile Include="Assets\Scripts\Net\proto\Login.cs" />
+    <Compile Include="Assets\Scripts\Net\proto\login.cs" />
+    <Compile Include="Assets\Scripts\Tables\LoadTables.cs" />
+    <Compile Include="Assets\Scripts\Tables\TestTable.cs" />
     <Compile Include="Assets\Scripts\Util\IManager.cs" />
+    <Compile Include="Assets\Scripts\Util\PathUtil.cs" />
     <Compile Include="Assets\Scripts\Util\Singleton.cs" />
     <Compile Include="Assets\Scripts\Util\SingletonMonoBehaviour.cs" />
+    <Compile Include="Assets\Scripts\Util\TableUtil.cs" />
     <Compile Include="Assets\Scripts\Util\UIEventListener.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
