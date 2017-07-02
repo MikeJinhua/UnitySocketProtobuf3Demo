@@ -1,3 +1,4 @@
+以windows为例，工具代码全是python的，可以自己写对应平台批处理来支持其他平台。
 1.python的安装
 windows
 自己安装python3，去官网自己下载。然后找到安装路径里面的python.exe，复制出来一个改名叫python3.exe。
