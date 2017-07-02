@@ -4,18 +4,18 @@ from const import gofile_path
 def genGolangfile(protos):
     fileContent = ""
     fileContent += (
-'package msg'
-'\n'
-'import (\n'
-'	"github.com/name5566/leaf/network/protobuf"\n'
-')'
-'\n\n'
-'var (\n'
-'	Processor = protobuf.NewProcessor()\n'
-')\n'
-'\n'
-'func init() {'
-'	// 这里我们注册了一个 protobuf 消息)\n'
+    'package msg'
+    '\n'
+    'import (\n'
+    '	"github.com/name5566/leaf/network/protobuf"\n'
+    ')'
+    '\n\n'
+    'var (\n'
+    '	Processor = protobuf.NewProcessor()\n'
+    ')\n'
+    '\n'
+    'func init() {'
+    '	// 这里我们注册了一个 protobuf 消息)\n'
     )
 
 
