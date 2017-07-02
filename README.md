@@ -7,9 +7,9 @@
 
 1,golang开发服务器。
 
-2，C#开发客户端，用unity。
+2,C#开发客户端，用unity。
 
-3.python3 开发工具。
+3,python3 开发工具。
 
 用到的框架
 
