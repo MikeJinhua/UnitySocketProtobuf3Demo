@@ -4,7 +4,8 @@ import xlrd
 
 from TableCode.cs_data import GenCSTableData
 from TableCode.cs_file import GenCSTableManagerFile, genCSLoadTablesFile
-from TableCode.go_file import GenGoTableManagerFile
+from TableCode.go_data import GenGolangTableData
+from TableCode.go_file import GenGoTableManagerFile, genGolangLoadTablesFile
 from const import excel_dir
 
 def processExcel(filePath, fileName):
@@ -39,10 +40,7 @@ def processExcel(filePath, fileName):
     if len(golang_fields_index) > 0:
         go_files.append(fileName)
         GenGoTableManagerFile(fileName, golang_fields_index, table)
-
-
-
-
+        GenGolangTableData(fileName, golang_fields_index, table)
 
 cs_files = []
 go_files = []
@@ -67,3 +65,4 @@ def excel_start():
                 excels.append(fileName)
 
     genCSLoadTablesFile(cs_files)
+    genGolangLoadTablesFile(go_files)
