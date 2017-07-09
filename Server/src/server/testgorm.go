@@ -86,6 +86,14 @@ func Test() {
 	}
 
 
+	err2 := db.Create(&Player{
+		Name: "Mike",
+	}).Error
+	if nil != err2 {
+		fmt.Println("already exist:",err2)
+	}
+
+
 	//query player Mike
 	var player Player
 	err = db.Where("Name = ?", "Mike"). Limit(1).Find(&player).Error
