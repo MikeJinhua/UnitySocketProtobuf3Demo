@@ -6,7 +6,7 @@ import (
 
 )
 
-func main() {
+func main1() {
 
 	Test()
 }
@@ -84,6 +84,14 @@ func Test() {
 	if nil != err {
 		fmt.Println("create 3 error:",err)
 	}
+
+
+	//err2 := db.Create(&Player{
+	//	Name: "Mike",
+	//}).Error
+	//if nil != err2 {
+	//	fmt.Println("already exist:",err2)
+	//}
 
 
 	//query player Mike

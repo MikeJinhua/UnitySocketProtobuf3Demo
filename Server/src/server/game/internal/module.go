@@ -14,8 +14,10 @@ type Module struct {
 	*module.Skeleton
 }
 
+
 func (m *Module) OnInit() {
 	m.Skeleton = skeleton
+	InitDBTables()
 }
 
 func (m *Module) OnDestroy() {

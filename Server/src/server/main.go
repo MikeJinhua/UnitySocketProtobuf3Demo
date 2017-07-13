@@ -12,6 +12,7 @@ import (
 )
 
 func main() {
+	game.OpenMysql()
 	lconf.LogLevel = conf.Server.LogLevel
 	lconf.LogPath = conf.Server.LogPath
 	lconf.LogFlag = conf.LogFlag
@@ -29,4 +30,9 @@ func main() {
 	)
 
 
+}
+
+
+func  InitDBTable()  {
+	
 }
