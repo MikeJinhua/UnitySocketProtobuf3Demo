@@ -4,6 +4,11 @@
     <assembly>
       <name>UnityEngine.Analytics</name>
     </assembly>
+    <member name="T:UnityEngine.Analytics.AnalyticsTracker">
+      <summary>
+        <para>Automatically create and send analytics events based on a variety of triggers.</para>
+      </summary>
+    </member>
     <member name="P:UnityEngine.Analytics.AnalyticsTracker.eventName">
       <summary>
         <para>Name of the event.</para>

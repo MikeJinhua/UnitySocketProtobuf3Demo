@@ -5,7 +5,6 @@ import (
 
 	"fmt"
 	"sync"
-	"container/heap"
 )
 
 
@@ -14,13 +13,17 @@ var (
 		mute = new (sync.Mutex)
 )
 
-func openDB()  {
-	mute.Lock()
-	defer mute.Unlock()
-	mysqlDB, err := gorm.Open("mysql", "mike:123456@tcp(localhost:3306)/gorm?parseTime=true")
+func OpenDB()  {
+	fmt.Println("mysqldb->open db")
+	mysqlDB1, err := gorm.Open("mysql", "mike:123456@tcp(localhost:3306)/gorm?parseTime=true")
+	mysqlDB = mysqlDB1
 	if err != nil {
 		panic("connect db error")
 	}
+}
+
+func InitDBTables()  {
+	mysqlDB.AutoMigrate(&PlayerBaseInfo{})
 }
 
 func  Lock()  {
@@ -31,7 +34,7 @@ func Unlock()  {
 	mute.Unlock()
 }
 
-func  GetMysqlDBAndLock()  {
+func  GetMysqlDBAndLock()  *gorm.DB{
 	Lock()
 	return MysqlDB()
 }
@@ -41,11 +44,6 @@ func  MysqlDB() *gorm.DB {
 }
 
 
-
-type PlayerBaseInfo struct {
-	ID    uint `gorm:"primary_key"`
-	Name string `gorm:"not null;unique"`
-}
 
 func Select()  {
 	mute.Lock()
