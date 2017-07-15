@@ -16,6 +16,10 @@ namespace Proto
             3,
             4,
             5,
+            6,
+            7,
+            8,
+            9,
         };
 
       private static List<Type>_protoType = new List<Type>
@@ -26,6 +30,10 @@ namespace Proto
             typeof(SignUpResponse),
             typeof(TosChat),
             typeof(TocChat),
+            typeof(Login),
+            typeof(PlayerBaseInfo),
+            typeof(LoginSuccessfull),
+            typeof(LoginFaild),
        };
 
        private static readonly Dictionary<RuntimeTypeHandle, MessageParser> Parsers = new Dictionary<RuntimeTypeHandle, MessageParser>()
@@ -36,6 +44,10 @@ namespace Proto
             {typeof(SignUpResponse).TypeHandle,SignUpResponse.Parser },
             {typeof(TosChat).TypeHandle,TosChat.Parser },
             {typeof(TocChat).TypeHandle,TocChat.Parser },
+            {typeof(Login).TypeHandle,Login.Parser },
+            {typeof(PlayerBaseInfo).TypeHandle,PlayerBaseInfo.Parser },
+            {typeof(LoginSuccessfull).TypeHandle,LoginSuccessfull.Parser },
+            {typeof(LoginFaild).TypeHandle,LoginFaild.Parser },
        };
 
         public static MessageParser GetMessageParser(RuntimeTypeHandle typeHandle)

@@ -16,6 +16,10 @@ It has these top-level messages:
 	SignUpResponse
 	TosChat
 	TocChat
+	Login
+	PlayerBaseInfo
+	LoginSuccessfull
+	LoginFaild
 */
 package msg
 
