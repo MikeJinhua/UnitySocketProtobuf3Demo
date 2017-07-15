@@ -44,8 +44,8 @@ gorm多说几句，本来想用gorm自动级联跨表查询和保存，结果发
 
 用到的几个软件
 
-1.Unity目前是Unity5.6.Unity2017正式发布之后马上就升级。以后会一直更新。Unity保持最新是Unity开发必备技能。
+1.Unity2017。
 
-2.Protobuf3,有可能更新。
+2.Protobuf3。
 
 
