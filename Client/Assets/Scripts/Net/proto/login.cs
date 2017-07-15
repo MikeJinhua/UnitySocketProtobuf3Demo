@@ -29,10 +29,10 @@ namespace Msg {
             "KAkSEAoIcGFzc3dhcmQYAiABKAkiMAoOUGxheWVyQmFzZUluZm8SEAoIUGxh",
             "eWVySUQYASABKA0SDAoETmFtZRgCIAEoCSI/ChBMb2dpblN1Y2Nlc3NmdWxs",
             "EisKDnBsYXllckJhc2VJbmZvGAEgASgLMhMubXNnLlBsYXllckJhc2VJbmZv",
-            "IoQBCgpMb2dpbkZhaWxkEicKBGNvZGUYASABKA4yGS5tc2cuTG9naW5GYWls",
-            "ZC5FcnJvckNvZGUiTQoJRXJyb3JDb2RlEh0KGUFjY291bnRPclBhc3N3YXJk",
+            "IpQBCgpMb2dpbkZhaWxkEicKBGNvZGUYASABKA4yGS5tc2cuTG9naW5GYWls",
+            "ZC5FcnJvckNvZGUiXQoJRXJyb3JDb2RlEh0KGUFjY291bnRPclBhc3N3YXJk",
             "Tm90TWF0Y2gQABIQCgxBY2NJREludmFsaWQQARIPCgtMb2dpblJlcGVhdBAC",
-            "YgZwcm90bzM="));
+            "Eg4KCklubmVyRXJyb3IQA2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -1020,6 +1020,7 @@ namespace Msg {
         [pbr::OriginalName("AccountOrPasswardNotMatch")] AccountOrPasswardNotMatch = 0,
         [pbr::OriginalName("AccIDInvalid")] AccIdinvalid = 1,
         [pbr::OriginalName("LoginRepeat")] LoginRepeat = 2,
+        [pbr::OriginalName("InnerError")] InnerError = 3,
       }
 
     }

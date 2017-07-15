@@ -4,6 +4,11 @@ import (
 	"github.com/name5566/leaf/gate"
 	"github.com/name5566/leaf/timer"
 	"github.com/name5566/leaf/go"
+	"server/msg"
+	"github.com/name5566/leaf/log"
+	"os/user"
+	"time"
+	"github.com/name5566/leaf/util"
 )
 
 var (
@@ -29,9 +34,47 @@ type Player struct {
 }
 
 func (player *Player) login(playerID uint) {
+
 	playerBaseInfo := new(PlayerBaseInfo)
 	player.playerBaseInfo = playerBaseInfo
 
+	skeleton.Go(func() {
+
+		err := playerBaseInfo.initValue(playerID)
+		if err != nil {
+			log.Error("init acc %v data error: %v", accID, err)
+			playerBaseInfo = nil
+			player.WriteMsg(&msg.LoginFaild{Code: msg.LoginFaild_InnerError})
+			player.Close()
+			return
+		}
+	}, func() {
+		// network closed
+		if player.state == userLogout {
+			player.logout(playerID)
+			return
+		}
+
+		// db error
+		player.state = userGame
+		if playerBaseInfo == nil {
+			return
+		}
+
+		// ok
+		player.playerBaseInfo = playerBaseInfo
+		playerID2Player[playerID] = player
+		//player.UserData().(*AgentInfo).userID = userData.UserID
+		player.onLogin()
+		player.autoSaveDB()
+	})
+
+
+}
+
+
+func (player *Player) isOffline() bool {
+	return player.state == userLogout
 }
 
 func (player *Player) logout(playerID uint) {
@@ -39,5 +82,27 @@ func (player *Player) logout(playerID uint) {
 }
 
 func (player *Player) autoSaveDB() {
+	const duration = 5 * time.Minute
+	// save
+	player.saveDBTimer = skeleton.AfterFunc(duration, func() {
+		data := util.DeepClone(player.playerBaseInfo)
+		player.Go(func() {
+			err:= data.(*PlayerBaseInfo).saveValue()
+			if err != nil {
+				log.Error("save user %v data error: %v", userID, err)
+			}
+
+		}, func() {
+			player.autoSaveDB()
+		})
+	})
+}
+
+func (player *Player) onLogin() {
 
 }
+
+func (player *Player) onLogout() {
+
+}
+

@@ -32,6 +32,8 @@ func creatAccountByAccountIDAndPassword(accountID string, password string) *Acco
 	err := db.Create(&account).Error
 	if nil != err {
 
+
+
 		return  nil
 	}
 

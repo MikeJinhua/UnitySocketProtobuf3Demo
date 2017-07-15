@@ -11,6 +11,7 @@ func init() {
 	skeleton.RegisterChanRPC("NewAgent", rpcNewAgent)
 	skeleton.RegisterChanRPC("CloseAgent", rpcCloseAgent)
 	skeleton.RegisterChanRPC("UserLogin", rpcUserLogin)
+	skeleton.RegisterChanRPC("CreatePlayer", rpcCreatePlayer)
 }
 
 func rpcNewAgent(args []interface{}) {
@@ -55,4 +56,12 @@ func rpcUserLogin(args []interface{}) {
 	playerID2Player[playerID] = newPlayer
 
 	newPlayer.login(playerID)
+}
+
+func rpcCreatePlayer(args []interface{})  {
+	//agent := args[0].(gate.Agent)
+	playerID := args[1].(uint)
+
+
+
 }
