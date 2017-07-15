@@ -20,3 +20,35 @@ message TocChat
 	  string name = 1;
 	  string content = 2;
 }
+
+message Login
+{
+	string account = 1;
+	string passward =2;
+}
+
+
+message PlayerBaseInfo
+	{
+		uint32 PlayerID = 1;
+		string Name = 2;
+
+	}
+
+message LoginSuccessfull
+{
+	
+	PlayerBaseInfo playerBaseInfo  = 1;
+}
+
+ 
+message LoginFaild
+{
+	enum ErrorCode
+	{
+		 AccountOrPasswardNotMatch = 0;
+		 AccIDInvalid = 1;
+		 LoginRepeat = 2;
+	}
+	ErrorCode code = 1;
+}

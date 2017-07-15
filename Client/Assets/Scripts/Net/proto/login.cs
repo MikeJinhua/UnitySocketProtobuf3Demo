@@ -25,13 +25,24 @@ namespace Msg {
             "Cgtsb2dpbi5wcm90bxIDbXNnIjQKDlNpZ25VcFJlc3BvbnNlEhEKCWVycm9y",
             "Q29kZRgBIAEoBRIPCgd2ZXJzaW9uGAIgASgCIigKB1Rvc0NoYXQSDAoEbmFt",
             "ZRgBIAEoCRIPCgdjb250ZW50GAIgASgJIigKB1RvY0NoYXQSDAoEbmFtZRgB",
-            "IAEoCRIPCgdjb250ZW50GAIgASgJYgZwcm90bzM="));
+            "IAEoCRIPCgdjb250ZW50GAIgASgJIioKBUxvZ2luEg8KB2FjY291bnQYASAB",
+            "KAkSEAoIcGFzc3dhcmQYAiABKAkiMAoOUGxheWVyQmFzZUluZm8SEAoIUGxh",
+            "eWVySUQYASABKA0SDAoETmFtZRgCIAEoCSI/ChBMb2dpblN1Y2Nlc3NmdWxs",
+            "EisKDnBsYXllckJhc2VJbmZvGAEgASgLMhMubXNnLlBsYXllckJhc2VJbmZv",
+            "IoQBCgpMb2dpbkZhaWxkEicKBGNvZGUYASABKA4yGS5tc2cuTG9naW5GYWls",
+            "ZC5FcnJvckNvZGUiTQoJRXJyb3JDb2RlEh0KGUFjY291bnRPclBhc3N3YXJk",
+            "Tm90TWF0Y2gQABIQCgxBY2NJREludmFsaWQQARIPCgtMb2dpblJlcGVhdBAC",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Msg.SignUpResponse), global::Msg.SignUpResponse.Parser, new[]{ "ErrorCode", "Version" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Msg.TosChat), global::Msg.TosChat.Parser, new[]{ "Name", "Content" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Msg.TocChat), global::Msg.TocChat.Parser, new[]{ "Name", "Content" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Msg.TocChat), global::Msg.TocChat.Parser, new[]{ "Name", "Content" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Msg.Login), global::Msg.Login.Parser, new[]{ "Account", "Passward" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Msg.PlayerBaseInfo), global::Msg.PlayerBaseInfo.Parser, new[]{ "PlayerID", "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Msg.LoginSuccessfull), global::Msg.LoginSuccessfull.Parser, new[]{ "PlayerBaseInfo" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Msg.LoginFaild), global::Msg.LoginFaild.Parser, new[]{ "Code" }, null, new[]{ typeof(global::Msg.LoginFaild.Types.ErrorCode) }, null)
           }));
     }
     #endregion
@@ -470,6 +481,549 @@ namespace Msg {
         }
       }
     }
+
+  }
+
+  public sealed partial class Login : pb::IMessage<Login> {
+    private static readonly pb::MessageParser<Login> _parser = new pb::MessageParser<Login>(() => new Login());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<Login> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Msg.LoginReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Login() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Login(Login other) : this() {
+      account_ = other.account_;
+      passward_ = other.passward_;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Login Clone() {
+      return new Login(this);
+    }
+
+    /// <summary>Field number for the "account" field.</summary>
+    public const int AccountFieldNumber = 1;
+    private string account_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Account {
+      get { return account_; }
+      set {
+        account_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "passward" field.</summary>
+    public const int PasswardFieldNumber = 2;
+    private string passward_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Passward {
+      get { return passward_; }
+      set {
+        passward_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as Login);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(Login other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Account != other.Account) return false;
+      if (Passward != other.Passward) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Account.Length != 0) hash ^= Account.GetHashCode();
+      if (Passward.Length != 0) hash ^= Passward.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Account.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Account);
+      }
+      if (Passward.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Passward);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Account.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Account);
+      }
+      if (Passward.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Passward);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(Login other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Account.Length != 0) {
+        Account = other.Account;
+      }
+      if (other.Passward.Length != 0) {
+        Passward = other.Passward;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            Account = input.ReadString();
+            break;
+          }
+          case 18: {
+            Passward = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class PlayerBaseInfo : pb::IMessage<PlayerBaseInfo> {
+    private static readonly pb::MessageParser<PlayerBaseInfo> _parser = new pb::MessageParser<PlayerBaseInfo>(() => new PlayerBaseInfo());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<PlayerBaseInfo> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Msg.LoginReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PlayerBaseInfo() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PlayerBaseInfo(PlayerBaseInfo other) : this() {
+      playerID_ = other.playerID_;
+      name_ = other.name_;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PlayerBaseInfo Clone() {
+      return new PlayerBaseInfo(this);
+    }
+
+    /// <summary>Field number for the "PlayerID" field.</summary>
+    public const int PlayerIDFieldNumber = 1;
+    private uint playerID_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public uint PlayerID {
+      get { return playerID_; }
+      set {
+        playerID_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "Name" field.</summary>
+    public const int NameFieldNumber = 2;
+    private string name_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as PlayerBaseInfo);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(PlayerBaseInfo other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (PlayerID != other.PlayerID) return false;
+      if (Name != other.Name) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (PlayerID != 0) hash ^= PlayerID.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (PlayerID != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(PlayerID);
+      }
+      if (Name.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Name);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (PlayerID != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PlayerID);
+      }
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(PlayerBaseInfo other) {
+      if (other == null) {
+        return;
+      }
+      if (other.PlayerID != 0) {
+        PlayerID = other.PlayerID;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 8: {
+            PlayerID = input.ReadUInt32();
+            break;
+          }
+          case 18: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class LoginSuccessfull : pb::IMessage<LoginSuccessfull> {
+    private static readonly pb::MessageParser<LoginSuccessfull> _parser = new pb::MessageParser<LoginSuccessfull>(() => new LoginSuccessfull());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<LoginSuccessfull> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Msg.LoginReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public LoginSuccessfull() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public LoginSuccessfull(LoginSuccessfull other) : this() {
+      PlayerBaseInfo = other.playerBaseInfo_ != null ? other.PlayerBaseInfo.Clone() : null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public LoginSuccessfull Clone() {
+      return new LoginSuccessfull(this);
+    }
+
+    /// <summary>Field number for the "playerBaseInfo" field.</summary>
+    public const int PlayerBaseInfoFieldNumber = 1;
+    private global::Msg.PlayerBaseInfo playerBaseInfo_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Msg.PlayerBaseInfo PlayerBaseInfo {
+      get { return playerBaseInfo_; }
+      set {
+        playerBaseInfo_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as LoginSuccessfull);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(LoginSuccessfull other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(PlayerBaseInfo, other.PlayerBaseInfo)) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (playerBaseInfo_ != null) hash ^= PlayerBaseInfo.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (playerBaseInfo_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(PlayerBaseInfo);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (playerBaseInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PlayerBaseInfo);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(LoginSuccessfull other) {
+      if (other == null) {
+        return;
+      }
+      if (other.playerBaseInfo_ != null) {
+        if (playerBaseInfo_ == null) {
+          playerBaseInfo_ = new global::Msg.PlayerBaseInfo();
+        }
+        PlayerBaseInfo.MergeFrom(other.PlayerBaseInfo);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            if (playerBaseInfo_ == null) {
+              playerBaseInfo_ = new global::Msg.PlayerBaseInfo();
+            }
+            input.ReadMessage(playerBaseInfo_);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class LoginFaild : pb::IMessage<LoginFaild> {
+    private static readonly pb::MessageParser<LoginFaild> _parser = new pb::MessageParser<LoginFaild>(() => new LoginFaild());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<LoginFaild> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Msg.LoginReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public LoginFaild() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public LoginFaild(LoginFaild other) : this() {
+      code_ = other.code_;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public LoginFaild Clone() {
+      return new LoginFaild(this);
+    }
+
+    /// <summary>Field number for the "code" field.</summary>
+    public const int CodeFieldNumber = 1;
+    private global::Msg.LoginFaild.Types.ErrorCode code_ = 0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Msg.LoginFaild.Types.ErrorCode Code {
+      get { return code_; }
+      set {
+        code_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as LoginFaild);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(LoginFaild other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Code != other.Code) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Code != 0) hash ^= Code.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Code != 0) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Code);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Code != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Code);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(LoginFaild other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Code != 0) {
+        Code = other.Code;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 8: {
+            code_ = (global::Msg.LoginFaild.Types.ErrorCode) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the LoginFaild message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      public enum ErrorCode {
+        [pbr::OriginalName("AccountOrPasswardNotMatch")] AccountOrPasswardNotMatch = 0,
+        [pbr::OriginalName("AccIDInvalid")] AccIdinvalid = 1,
+        [pbr::OriginalName("LoginRepeat")] LoginRepeat = 2,
+      }
+
+    }
+    #endregion
 
   }
 

@@ -9,10 +9,11 @@ import (
 	"server/login"
 	"server/gamedata"
 	"fmt"
+	"server/mysql"
 )
 
 func main() {
-	game.OpenMysql()
+	mysql.OpenDB()
 	lconf.LogLevel = conf.Server.LogLevel
 	lconf.LogPath = conf.Server.LogPath
 	lconf.LogFlag = conf.LogFlag
@@ -29,9 +30,7 @@ func main() {
 		login.Module,
 	)
 
-
 }
-
 
 func  InitDBTable()  {
 	

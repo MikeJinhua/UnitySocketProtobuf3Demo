@@ -3,6 +3,7 @@ package internal
 import (
 	"github.com/name5566/leaf/module"
 	"server/base"
+	"server/mysql"
 )
 
 var (
@@ -17,7 +18,12 @@ type Module struct {
 
 func (m *Module) OnInit() {
 	m.Skeleton = skeleton
-	InitDBTables()
+	InitGameTables()
+}
+
+func InitGameTables() {
+	db:=mysql.MysqlDB()
+	db.AutoMigrate(&PlayerBaseInfo{})
 }
 
 func (m *Module) OnDestroy() {
