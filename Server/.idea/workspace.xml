@@ -15,8 +15,8 @@
       <file leaf-file-name="player.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/server/game/internal/player.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="32" column="42" lean-forward="false" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
+            <state relative-caret-position="270">
+              <caret line="15" column="12" lean-forward="false" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
               <folding>
                 <element signature="e#18#126#0" expanded="true" />
               </folding>
@@ -84,7 +84,7 @@
             <state relative-caret-position="378">
               <caret line="30" column="1" lean-forward="false" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
               <folding>
-                <marker date="1500134989218" expanded="false" signature="25:77" ph="..." />
+                <marker date="1500135078912" expanded="false" signature="25:77" ph="..." />
               </folding>
             </state>
           </provider>
@@ -94,9 +94,9 @@
         <entry file="file://$PROJECT_DIR$/src/server/login/internal/handler.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="198">
-              <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+              <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
               <folding>
-                <marker date="1500134989231" expanded="false" signature="25:29" ph="..." />
+                <marker date="1500135078917" expanded="false" signature="25:29" ph="..." />
               </folding>
             </state>
           </provider>
@@ -106,9 +106,9 @@
         <entry file="file://$PROJECT_DIR$/src/server/game/internal/chanrpc.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="972">
-              <caret line="57" column="1" lean-forward="true" selection-start-line="57" selection-start-column="1" selection-end-line="57" selection-end-column="1" />
+              <caret line="57" column="1" lean-forward="false" selection-start-line="57" selection-start-column="1" selection-end-line="57" selection-end-column="1" />
               <folding>
-                <marker date="1500134989211" expanded="false" signature="25:67" ph="..." />
+                <marker date="1500135078911" expanded="false" signature="25:67" ph="..." />
               </folding>
             </state>
           </provider>
@@ -118,7 +118,7 @@
         <entry file="file://$PROJECT_DIR$/src/server/msg/msg.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
-              <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+              <caret line="21" column="1" lean-forward="false" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -157,11 +157,11 @@
         <option value="$PROJECT_DIR$/src/server/main.go" />
         <option value="$PROJECT_DIR$/src/server/login/internal/account.go" />
         <option value="$PROJECT_DIR$/src/server/game/internal/playerbaseinfo.go" />
-        <option value="$PROJECT_DIR$/src/server/game/internal/player.go" />
         <option value="$PROJECT_DIR$/src/server/game/internal/chanrpc.go" />
         <option value="$PROJECT_DIR$/src/server/msg/msg.go" />
         <option value="$PROJECT_DIR$/src/server/login/internal/handler.go" />
         <option value="$PROJECT_DIR$/src/server/login/internal/module.go" />
+        <option value="$PROJECT_DIR$/src/server/game/internal/player.go" />
       </list>
     </option>
   </component>
@@ -977,7 +977,7 @@
     <entry file="file://$PROJECT_DIR$/src/server/msg/msg.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
-          <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+          <caret line="21" column="1" lean-forward="false" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -987,7 +987,7 @@
         <state relative-caret-position="378">
           <caret line="30" column="1" lean-forward="false" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
           <folding>
-            <marker date="1500134989218" expanded="false" signature="25:77" ph="..." />
+            <marker date="1500135078912" expanded="false" signature="25:77" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1003,9 +1003,9 @@
     <entry file="file://$PROJECT_DIR$/src/server/game/internal/chanrpc.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="972">
-          <caret line="57" column="1" lean-forward="true" selection-start-line="57" selection-start-column="1" selection-end-line="57" selection-end-column="1" />
+          <caret line="57" column="1" lean-forward="false" selection-start-line="57" selection-start-column="1" selection-end-line="57" selection-end-column="1" />
           <folding>
-            <marker date="1500134989211" expanded="false" signature="25:67" ph="..." />
+            <marker date="1500135078911" expanded="false" signature="25:67" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1013,9 +1013,9 @@
     <entry file="file://$PROJECT_DIR$/src/server/login/internal/handler.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
-          <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
           <folding>
-            <marker date="1500134989231" expanded="false" signature="25:29" ph="..." />
+            <marker date="1500135078917" expanded="false" signature="25:29" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1038,8 +1038,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/server/game/internal/player.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="32" column="42" lean-forward="false" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
+        <state relative-caret-position="270">
+          <caret line="15" column="12" lean-forward="false" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
           <folding>
             <element signature="e#18#126#0" expanded="true" />
           </folding>
