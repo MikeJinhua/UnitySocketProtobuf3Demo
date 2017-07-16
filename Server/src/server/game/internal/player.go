@@ -6,7 +6,6 @@ import (
 	"github.com/name5566/leaf/go"
 	"server/msg"
 	"github.com/name5566/leaf/log"
-	"os/user"
 	"time"
 	"github.com/name5566/leaf/util"
 )
@@ -39,10 +38,9 @@ func (player *Player) login(playerID uint) {
 	player.playerBaseInfo = playerBaseInfo
 
 	skeleton.Go(func() {
-
 		err := playerBaseInfo.initValue(playerID)
 		if err != nil {
-			log.Error("init acc %v data error: %v", accID, err)
+			log.Error("init acc %v data error: %v", playerID, err)
 			playerBaseInfo = nil
 			player.WriteMsg(&msg.LoginFaild{Code: msg.LoginFaild_InnerError})
 			player.Close()
@@ -69,9 +67,12 @@ func (player *Player) login(playerID uint) {
 		player.autoSaveDB()
 	})
 
-
 }
 
+func CreatePlayer(playerID uint) error {
+	err := CreatePlayerBaseInfo(playerID)
+	return err
+}
 
 func (player *Player) isOffline() bool {
 	return player.state == userLogout
@@ -87,9 +88,9 @@ func (player *Player) autoSaveDB() {
 	player.saveDBTimer = skeleton.AfterFunc(duration, func() {
 		data := util.DeepClone(player.playerBaseInfo)
 		player.Go(func() {
-			err:= data.(*PlayerBaseInfo).saveValue()
+			err := data.(*PlayerBaseInfo).saveValue()
 			if err != nil {
-				log.Error("save user %v data error: %v", userID, err)
+				log.Error("save user %v data error: %v", player.playerBaseInfo.PlayerID, err)
 			}
 
 		}, func() {
@@ -105,4 +106,3 @@ func (player *Player) onLogin() {
 func (player *Player) onLogout() {
 
 }
-

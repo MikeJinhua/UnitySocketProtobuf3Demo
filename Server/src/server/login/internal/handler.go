@@ -37,7 +37,6 @@ func handleAuth(args []interface{}) {
 		if nil != newAccount{
 			game.ChanRPC.Go("CreatePlayer", a, newAccount.PlayerID)
 			game.ChanRPC.Go("UserLogin", a, newAccount.PlayerID)
-
 		} else {
 			log.Debug("create account error ",m.Account)
 			a.WriteMsg(&msg.LoginFaild{Code: msg.LoginFaild_InnerError})

@@ -1,0 +1,8 @@
+Hello
+
+Thank you for purchasing this texture pack. 
+
+The Materials are Unity standard shaders and I have set the tiling of the materials to 3 times.
+You can chance the tiling value of the textures on the Inspector by opening the Material Tab.
+
+Textures are 512*512 png files.

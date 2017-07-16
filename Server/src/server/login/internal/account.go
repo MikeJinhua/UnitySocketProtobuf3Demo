@@ -26,14 +26,10 @@ func  getAccountByAccountID(accountID string) *Account{
 
 
 func creatAccountByAccountIDAndPassword(accountID string, password string) *Account{
-
 	db := mysql.MysqlDB()
 	var account = Account{AccountID:accountID,Password:password}
 	err := db.Create(&account).Error
 	if nil != err {
-
-
-
 		return  nil
 	}
 

@@ -184,6 +184,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\GameData\TableData\TestTable.txt" />
+    <None Include="Assets\read me.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
