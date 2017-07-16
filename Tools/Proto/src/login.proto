@@ -49,6 +49,7 @@ message LoginFaild
 		 AccountOrPasswardNotMatch = 0;
 		 AccIDInvalid = 1;
 		 LoginRepeat = 2;
+		 InnerError = 3;
 	}
 	ErrorCode code = 1;
 }

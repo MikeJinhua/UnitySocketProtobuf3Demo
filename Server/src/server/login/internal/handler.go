@@ -35,10 +35,11 @@ func handleAuth(args []interface{}) {
 	//not having this account,creat account
 		newAccount := creatAccountByAccountIDAndPassword(m.Account,password)
 		if nil != newAccount{
+			game.ChanRPC.Go("CreatePlayer", a, newAccount.PlayerID)
 			game.ChanRPC.Go("UserLogin", a, newAccount.PlayerID)
 		} else {
-			log.Debug("create account error ")
-			//a.WriteMsg(&msg.LoginFaild{Code: msg.LoginFaild_AccountOrPasswardNotMatch})
+			log.Debug("create account error ",m.Account)
+			a.WriteMsg(&msg.LoginFaild{Code: msg.LoginFaild_InnerError})
 		}
 
 	} else {
