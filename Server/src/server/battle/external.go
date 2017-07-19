@@ -1,9 +1,20 @@
 package battle
 import (
-	"server/game/internal"
+	"server/battle/internal"
 )
 
 var (
-	Module  = new(internal.Module)
+	Module  *internal.Module
 	ChanRPC = internal.ChanRPC
 )
+
+type Player struct {
+
+
+}
+
+
+func  CreateBattleModel(accountID string) *internal.Module{
+
+
+}

@@ -6,6 +6,7 @@ import (
 	"github.com/name5566/leaf/log"
 	"reflect"
 	"server/msg"
+	"server/battle"
 )
 
 func init() {
@@ -35,6 +36,8 @@ func handleTosChat(args []interface{}) {
 		Name:    m.Name,
 		Content: m.Content,
 	})
+
+	battle = new battle.Module()
 }
 
 //func handleHello(args []interface{}) {

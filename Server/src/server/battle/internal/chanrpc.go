@@ -1,9 +1,14 @@
 package internal
 
+import "fmt"
 
 func init() {
-	//skeleton.RegisterChanRPC("NewAgent", rpcNewAgent)
-	//skeleton.RegisterChanRPC("CloseAgent", rpcCloseAgent)
-	//skeleton.RegisterChanRPC("UserLogin", rpcUserLogin)
-	//skeleton.RegisterChanRPC("CreatePlayer", rpcCreatePlayer)
+	skeleton.RegisterChanRPC("BattleTestRpc", BattleTestRpc)
 }
+
+
+func BattleTestRpc(args []interface{}) {
+	fmt.Println("BattleTestRpc")
+	//
+}
+
