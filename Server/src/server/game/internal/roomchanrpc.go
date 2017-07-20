@@ -1,8 +1,8 @@
-package battle
+package internal
 
 import "fmt"
 
-func (room *Room) RegisterChanRPC() {
+func (room *Room) registerChanRPC() {
 	room.chanRPC.Register("StartBattle", room.rpcStartBattle)
 
 }

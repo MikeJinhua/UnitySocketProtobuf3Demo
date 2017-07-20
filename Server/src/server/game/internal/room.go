@@ -1,4 +1,4 @@
-package battle
+package internal
 
 import (
 	"github.com/name5566/leaf/module"
@@ -14,4 +14,5 @@ type Room struct{
 func (room *Room) OnInit() {
 	room.skeleton = base.NewSkeleton()
 	room.chanRPC = room.skeleton.ChanRPCServer
+	room.registerChanRPC()
 }
