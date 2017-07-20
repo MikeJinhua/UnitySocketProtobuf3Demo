@@ -35,6 +35,7 @@ func handleTosChat(args []interface{}) {
 		Name:    m.Name,
 		Content: m.Content,
 	})
+
 }
 
 //func handleHello(args []interface{}) {
