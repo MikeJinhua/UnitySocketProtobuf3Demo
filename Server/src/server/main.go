@@ -33,5 +33,5 @@ func main() {
 }
 
 func  InitDBTable()  {
-	
+
 }
