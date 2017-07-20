@@ -11,8 +11,8 @@ type Room struct{
 	chanRPC   *chanrpc.Server
 }
 
-func (room *Room) OnInit() {
-	room.skeleton = base.NewSkeleton()
-	room.chanRPC = room.skeleton.ChanRPCServer
+func   newRoom() *Room{
+	room := Room{skeleton:base.NewSkeleton(),chanRPC:skeleton.ChanRPCServer}
 	room.registerChanRPC()
+	return  &room
 }

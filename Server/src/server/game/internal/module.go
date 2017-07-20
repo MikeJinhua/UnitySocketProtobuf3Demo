@@ -19,6 +19,9 @@ type Module struct {
 func (m *Module) OnInit() {
 	m.Skeleton = skeleton
 	InitGameTables()
+	room := newRoom()
+	///test call room rpc
+	room.chanRPC.Go("StartBattle", 1, 1)
 }
 
 func InitGameTables() {
