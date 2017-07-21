@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ChatView : SingletonMonoBehaviour<ChatView>
 {
-    private Button btn_chat;
+    public Button btn_chat;
     private InputField inputField;
     private GameObject itemGo;
     private Transform grid;
@@ -13,15 +13,16 @@ public class ChatView : SingletonMonoBehaviour<ChatView>
 	void Start () 
     {
         tranf = transform;
-        btn_chat = tranf.Find("Button").GetComponent<Button>();
+        //btn_chat = tranf.Find("Button").GetComponent<Button>();
         inputField = tranf.Find("InputField").GetComponent<InputField>();
         itemGo = Resources.Load("Prefabs/ChatView/item") as GameObject;
         grid = tranf.Find("Scroll/Grid");
         UIEventListener.Get(btn_chat.gameObject).onClick = OnClickChatBtn;
 	}
 
-    private void OnClickChatBtn(GameObject go)
+    public void OnClickChatBtn(GameObject go)
     {
+        Debug.Log("OnClickChatBtn");
         AddChatItem(inputField.text);
         ChatModel.Instance.CTosChat("客户端", inputField.text);
     }
