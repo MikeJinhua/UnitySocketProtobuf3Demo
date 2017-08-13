@@ -13,18 +13,17 @@ var(
 )
 
 type Room struct{
-	skeleton *module.Skeleton
-	chanRPC   *chanrpc.Server
+
+	roomChanRPC   *chanrpc.Server
 	roomID uint
 }
 
 func   newRoom(roomID uint) *Room{
 	fmt.Println("newRoom",roomID)
-	room := Room{skeleton:base.NewSkeleton(),chanRPC:chanrpc.NewServer(conf.ChanRPCLen)}
+	room := Room{roomChanRPC:chanrpc.NewServer(conf.ChanRPCLen)}
 
 	room.registerChanRPC()
 	room.roomID = roomID
-	room.skeleton.GoLen = 1111111111
 	return  &room
 }
 
