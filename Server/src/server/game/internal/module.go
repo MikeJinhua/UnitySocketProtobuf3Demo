@@ -19,14 +19,19 @@ type Module struct {
 func (m *Module) OnInit() {
 	m.Skeleton = skeleton
 	InitGameTables()
-	room := newRoom()
-	///test call room rpc
-	room.chanRPC.Go("StartBattle", 1, 1)
+	InitRooms()
+
 }
 
 func InitGameTables() {
 	db:=mysql.MysqlDB()
 	db.AutoMigrate(&PlayerBaseInfo{})
+}
+
+func InitRooms(){
+	for i := 0; i < 10; i++ {
+		CreateRooms(uint(i))
+	}
 }
 
 func (m *Module) OnDestroy() {
