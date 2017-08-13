@@ -3,8 +3,8 @@ package internal
 import "fmt"
 
 func (room *Room) registerChanRPC() {
-	room.chanRPC.Register("EnterRoom", room.rpcEnterRoom)
-	room.chanRPC.Register("StartBattle", room.rpcStartBattle)
+	room.roomChanRPC.Register("EnterRoom", room.rpcEnterRoom)
+	room.roomChanRPC.Register("StartBattle", room.rpcStartBattle)
 
 }
 
