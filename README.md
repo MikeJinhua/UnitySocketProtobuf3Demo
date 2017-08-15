@@ -13,7 +13,7 @@
 
 用到的框架
 
-https://github.com/caolaoyao/Chat，
+https://github.com/caolaoyao/Chat
 
 https://github.com/name5566/leaf
 
