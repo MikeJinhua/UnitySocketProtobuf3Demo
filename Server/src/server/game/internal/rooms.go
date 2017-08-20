@@ -1,6 +1,7 @@
 package internal
 
 
+
 var(
 	rooms = make(map[uint]*Room)
 	lastRoomID = uint(0)
@@ -21,3 +22,13 @@ func GetRoom(roomID uint) *Room{
 	return  room
 }
 
+
+func InitRooms(){
+	for i := 0; i < 10; i++ {
+		CreateRooms(uint(i))
+
+	}
+
+	//test
+
+}

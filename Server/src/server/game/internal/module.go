@@ -28,11 +28,7 @@ func InitGameTables() {
 	db.AutoMigrate(&PlayerBaseInfo{})
 }
 
-func InitRooms(){
-	for i := 0; i < 10; i++ {
-		CreateRooms(uint(i))
-	}
-}
+
 
 func (m *Module) OnDestroy() {
 
