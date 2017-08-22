@@ -1,7 +1,6 @@
 package internal
 
 import (
-	"github.com/liangdas/mqant/gate"
 	"fmt"
 )
 
