@@ -38,7 +38,7 @@ var (
     fileContent += "        {0}Data[r.{1}] = *r\n".format(tableName,table.cell(3, 0).value)
 
     fileContent += "    }\n}\n\n"
-    fileContent += "func GetDataByID(id int) ("+tableName+") {\n"
+    fileContent += "func Get"+tableName+"ByID(id int) ("+tableName+") {\n"
     fileContent += "	return  {0}Data[id]\n".format(tableName)
     fileContent += "}\n"
 
