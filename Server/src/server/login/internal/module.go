@@ -4,7 +4,6 @@ import (
 
 	"github.com/name5566/leaf/module"
 	"server/base"
-	"server/mysql"
 )
 
 var (
@@ -25,8 +24,8 @@ func (m *Module) OnInit() {
 }
 
 func InitLoginTables() {
-	db := mysql.MysqlDB()
-	db.AutoMigrate(&Account{})
+	//db := mysql.MysqlDB()
+	//db.AutoMigrate(&Account{})
 }
 
 

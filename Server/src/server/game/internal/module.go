@@ -3,7 +3,6 @@ package internal
 import (
 	"github.com/name5566/leaf/module"
 	"server/base"
-	"server/mysql"
 )
 
 var (
@@ -24,8 +23,8 @@ func (m *Module) OnInit() {
 }
 
 func InitGameTables() {
-	db:=mysql.MysqlDB()
-	db.AutoMigrate(&PlayerBaseInfo{})
+	//db:=mysql.MysqlDB()
+	//db.AutoMigrate(&PlayerBaseInfo{})
 }
 
 
