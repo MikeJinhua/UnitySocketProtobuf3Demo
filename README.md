@@ -45,7 +45,9 @@ Leaf源码有一处改动，统一了服务器客户端的大小端问题，统�
 
 消息工具和配表工具，安装说明在这里UnitySocketProtobuf3Demo/Tools/工具安装说明.txt
 
-用到的几个软件
+推荐编辑器：Gogland
+
+用到的几个软件:
 
 1.Unity2017。
 
