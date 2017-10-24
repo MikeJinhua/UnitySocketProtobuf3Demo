@@ -29,6 +29,7 @@ https://github.com/name5566/leaf
 
 4.db可以用gorm，很方便。
 gorm多说几句，本来想用gorm自动级联跨表查询和保存，结果发现各种问题各种不习惯，最后还是决定，只用orm做基础的结构体和db table的映射，复合结构还是自己写函数处理下比较和自己习惯。
+demo里面数据库名字是poker，可自行修改或者注释掉gorm。
 有个demo文件在UnitySocketProtobuf3Demo\Server\src\server\testgorm.go 实现基本的代码类自动生成数据结构，程序方便用的查询接口，保存和替换数据等。
 
 **特别注意：
