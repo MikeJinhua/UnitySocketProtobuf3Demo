@@ -14,7 +14,7 @@ public class Main : MonoBehaviour
     private void InitNet()
     {
         gameObject.AddComponent<NetManager>();
-        NetManager.Instance.SendConnect();
+        //NetManager.Instance.SendConnect();
     }
 
     private void InitManager()
