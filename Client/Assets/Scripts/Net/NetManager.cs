@@ -8,8 +8,26 @@ using Google.Protobuf;
 
 namespace Net
 {
-    public class NetManager : SingletonMonoBehaviour<NetManager>
+    public class NetManager : MonoBehaviour
     {
+        private static NetManager _instance;
+        public static NetManager Instance
+        {
+            get
+            {
+                return _instance;
+            }
+        }
+
+        private void Awake()
+        {
+            _instance = this;
+            Init();
+            //
+            SendConnect();
+
+        }
+
         private Dictionary<Type, TocHandler> _handlerDic;
         private SocketClient _socketClient;
         SocketClient socketClient
@@ -26,7 +44,7 @@ namespace Net
 
         void Start()
         {
-            Init();
+            //Init();
         }
 
         public void Init()
