@@ -13,8 +13,7 @@
 
 服务器框架
 https://github.com/name5566/leaf
-
-表示感谢。如有侵权请及时联系。
+先要看leaf wiki里面go中使用protobuf的说明，尤其这个要安装go get github.com/golang/protobuf/protoc-gen-go
 
 主要功能:
 
@@ -33,6 +32,7 @@ demo里面数据库名字是poker，可自行修改或者注释掉gorm。
 **特别注意：
 Leaf源码有一处改动，统一了服务器客户端的大小端问题，统一成了小端序。
 服务器改过的源码在这里./Server/改过代码的leaf版本.zip
+注意清掉原来的编译文件，要不然会收不到消息直接断开之类的错误。
 
 消息批处理在这里UnitySocketProtobuf3Demo\Tools\GenProto.bat
 
