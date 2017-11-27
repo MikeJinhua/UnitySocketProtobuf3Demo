@@ -36,11 +36,11 @@ Leaf源码有一处改动，统一了服务器客户端的大小端问题，统�
 
 消息批处理在这里UnitySocketProtobuf3Demo\Tools\GenProto.bat
 
-消息配置文件在这里UnitySocketProtobuf3Demo\Tools\Proto\src\*
+消息配置文件在这里UnitySocketProtobuf3Demo\Tools\Proto\src\\*
 
 配表批处理在这里UnitySocketProtobuf3Demo\Tools\GenTableData.bat
 
-配表文件在这里UnitySocketProtobuf3Demo\Tools\TableData\*
+配表文件在这里UnitySocketProtobuf3Demo\Tools\TableData\\*
 
 消息工具和配表工具，安装说明在这里UnitySocketProtobuf3Demo/Tools/工具安装说明.txt
 
