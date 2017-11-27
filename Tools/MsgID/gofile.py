@@ -15,7 +15,7 @@ def genGolangfile(protos):
     ')\n'
     '\n'
     'func init() {'
-    '	// 这里我们注册 protobuf 消息)\n'
+     '	// 这里我们注册 protobuf 消息)\n'
      '    Processor.SetByteOrder(true)\n'
     )
 

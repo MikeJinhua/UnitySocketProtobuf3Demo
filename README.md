@@ -27,12 +27,7 @@ https://github.com/name5566/leaf
 gorm多说几句，本来想用gorm自动级联跨表查询和保存，结果发现各种问题各种不习惯，最后还是决定，只用orm做基础的结构体和db table的映射，复合结构还是自己写函数处理下比较和自己习惯。
 demo里面数据库名字是poker，可自行修改或者注释掉gorm。
 有个demo文件在UnitySocketProtobuf3Demo\Server\src\server\testgorm.go 实现基本的代码类自动生成数据结构，程序方便用的查询接口，保存和替换数据等。
-如果不想用mysql 可以去掉mysql/mysql.go文件和相关调用，不影响demo运行
-
-**特别注意：
-Leaf源码有一处改动，统一了服务器客户端的大小端问题，统一成了小端序。
-服务器改过的源码在这里./Server/改过代码的leaf版本.zip
-注意清掉原来的编译文件，要不然会收不到消息直接断开之类的错误。
+如果不想用mysql 可以去掉mysql/mysql.go文件和相关调用，不影响demo运行。
 
 消息批处理在这里UnitySocketProtobuf3Demo\Tools\GenProto.bat
 
