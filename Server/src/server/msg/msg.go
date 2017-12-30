@@ -8,6 +8,7 @@ var (
 )
 
 func init() {	// 这里我们注册了一个 protobuf 消息)
+    Processor.SetByteOrder(true)
     Processor.Register(&StartFight{})
     Processor.Register(&FightResult{})
     Processor.Register(&EnterFight{})
