@@ -4,10 +4,25 @@ windows
 自己安装python3，去官网自己下载。然后找到安装路径里面的python.exe，复制出来一个改名叫python3.exe。
 如果你安装过python2，出现冲突。说明你是老司机，自行解决。
 mac & linux 如果不自带python3 自行安装
-2第三方库的安装
+2.第三方库的安装
 (理论上讲命令行直接拷贝就行的，真的报错自己谷歌搜吧，环境变量找不到pip之类的错误很简单。)
 pip install xlrd // 读取excel用
+3.Mac protobuf 安装。
+  brew install automake
+  brew install libtool
+  brew install protobuf
 
-3使用。
+  sudo mkdir /usr/local/include
+  sudo chown -R $(whoami):admin /usr/local/include
+  brew link protobuf
+
+   由于要配置 protobuf的golang环境，还需要安装golang的插件，插件的安装方法比较简单；
+      （1） go get -u -v github.com/golang/protobuf/proto
+                go get -u -v github.com/golang/protobuf/protoc-gen-go
+
+
+4.使用。
 GenProto.bat，生成两端消息文件和对应的id管理类
 GenTableData.bat，生成两端配表和初始化统一接口。
+
+
