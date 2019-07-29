@@ -27,7 +27,7 @@ def GenCSTableManagerFile(tableName, fieldsIndex, table):
             "    public " + fieldtype + " " + fieldName + ";\n"
 
     fileContent += \
-        "    public  " + tableName + "(string line)\n"
+        "    public " + tableName + "(string line)\n"
     fileContent += \
         "    {\n"
     fileContent += \
@@ -42,16 +42,16 @@ def GenCSTableManagerFile(tableName, fieldsIndex, table):
         index = str(index)
         if fieldtype == "int[]".lower():
             fileContent += \
-                "        " + fieldName + " =TableUtil.LoadInts(fileds[" + index + "]);\n"
+                "        " + fieldName + " = TableUtil.LoadInts(fileds[" + index + "]);\n"
         elif fieldtype == "Map[String]Int".lower():
             fileContent += \
-                "        " + fieldName + " =TableUtil.LoadDictString2Int(fileds[" + index + "]);\n"
+                "        " + fieldName + " = TableUtil.LoadDictString2Int(fileds[" + index + "]);\n"
         elif fieldtype == "int" or fieldtype == "float":
             fileContent += \
-                "        " + fieldName + " =" + fieldtype + ".Parse(fileds[" + index + "]);\n"
+                "        " + fieldName + " = " + fieldtype + ".Parse(fileds[" + index + "]);\n"
         elif fieldtype == "string":
             fileContent += \
-                "        " + fieldName + " =fileds[" + index + "];\n"
+                "        " + fieldName + " = fileds[" + index + "];\n"
 
     fileContent += \
         "     }\n"
@@ -66,7 +66,7 @@ def GenCSTableManagerFile(tableName, fieldsIndex, table):
         "public class " + tableName + "Manager\n"
     fileContent += \
         '{\n' \
-        '    Dictionary<int, TestTable> data = new Dictionary<int, TestTable>();\n' \
+        '    Dictionary<int, ' + tableName + '> data = new Dictionary<int, ' + tableName + '>();\n' \
         "\n" \
         '    public void InitTable()\n' \
         '    {\n'\
@@ -83,11 +83,11 @@ def GenCSTableManagerFile(tableName, fieldsIndex, table):
             line = line.Trim();
             if (line.Length > 0)
             {
-                TestTable rowData = new TestTable(line);\n'''
+                ''' + tableName + ' rowData = new ' + tableName + '(line);\n'''
     fileContent += \
     "                data.Add(rowData."+ table.cell(3, 0).value + ", rowData);\n"
     fileContent += \
-        '''}
+        '''            }
             else
             {
                 continue;
@@ -98,17 +98,29 @@ def GenCSTableManagerFile(tableName, fieldsIndex, table):
 
     keyType = table.cell(2, 0).value
     fileContent += \
-        "    public TestTable GetDataByID("+keyType.lower()+" id)\n"
+        '''    public ''' + tableName + ''' GetDataByID(''' + keyType.lower() + ''' id)\n'''
     fileContent += \
 '''    {
-        TestTable rowData = null;
+        ''' + tableName + ''' rowData = null;
         data.TryGetValue(id, out rowData);
         return rowData;
+    }\n\n'''
+
+    keyType = table.cell(2, 1).value
+    fileContent += \
+        '''    public ''' + tableName + ''' GetDataByName(''' + keyType.lower() + ''' name)\n'''
+    fileContent += \
+'''    {
+        foreach(KeyValuePair<int, ''' + tableName + '''> kp in data)
+        {
+            if (kp.Value.Name == name) return kp.Value;
+        }
+        return null;
     }
 
-    private TestTableManager() { }
+    private ''' + tableName + '''Manager() { }
 
-    public static readonly TestTableManager Instance = new TestTableManager();
+    public static readonly ''' + tableName + '''Manager Instance = new ''' + tableName + '''Manager();
 
 } '''
 
