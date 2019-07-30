@@ -16,6 +16,9 @@ def GenGoTableManagerFile(tableName, fieldsIndex, table):
 
         if fieldtype == "int[]":
             fieldtype = "[]int"
+            
+        if fieldtype == "float":
+            fieldtype = "float32"
 
         fieldName = table.cell(3, index).value
         fileContent += \
