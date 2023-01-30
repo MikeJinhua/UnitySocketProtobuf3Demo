@@ -39,7 +39,7 @@ demo里面数据库名字是poker，可自行修改或者注释掉gorm。
 
 消息工具和配表工具，安装说明在这里UnitySocketProtobuf3Demo/Tools/工具安装说明.txt
 
-推荐编辑器：Goland ，参考goland_cfg.png
+推荐编辑器：Goland ，参考Server/goland_cfg.png
 
 
 用到的几个软件:
